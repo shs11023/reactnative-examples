@@ -30,6 +30,15 @@ class App extends Component<{}> {
   _handleTextChange(event) {
       console.log(event.nativeEvent.text);
       this.setState({zip: event.nativeEvent.text});
+
+      // Update states related forecast from server
+      /*
+        fetch('http://api.test.php?'+zip).then((resopnse)=> response.json()).then((responseJSON)=> {
+          responseJSON.weather[0].main,
+          ... blah blah
+
+      })
+      */
   }
 
   // https://facebook.github.io/react-native/docs/textinput.html
